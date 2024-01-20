@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style type="text/css">
+        body{
+            background: #333;
+        }
+        #left{
+            margin-left: 20px;
+        }
+        h1{
+            padding: 20px;
+        }
+        .box{
+            border: 1px solid wheat;
+            width: 400px;
+            height: 400px;
+            margin: 20px;
+            position: relative;
+            overflow: hidden;
+        }
+        .circle{
+            width: 30px;
+            height: 30px;
+            border-radius: 50px;
+            background: orange;
+            position: absolute;
+            left: 0;
+            top: 0;
+        }
+    </style>
+    <script src="script/jquery-3.7.1.js"></script>
+    <script src="script/jquery-ui.js"></script>
+    <script lang="java">
+        $(function(){
+            $("#left").click(function(){
+                $(".circle").animate({"left":"+=50px"})
+            }) //left
+            $("#right").click(function(){
+                $(".circle").animate({"left":"-=50px"})
+            })
+            $("#top").click(function(){
+                $(".circle").animate({"top":"+=50px"})
+            })
+            $("#bottom").click(function(){
+                $(".circle").animate({"top":"-=50px"})
+            })
+            // animate는 포지션을 줘야 쓸 수 있음
+            // 포지션을 레프트와 탑을 기준으로 줬기 떄문에 애니메이션도 레프트와 탑을 기준으로해서 주기
+            
+            // $("h1").css("color","blue").css("background","pink")
+            // $("h1").css({"color":"blue","background":"pink"})
+
+            // 1개의 속성만 바꿀떄는 값은 소가로 안에 ,로 
+            // 2개 이상 속성 바꿀 떄는 값은 중가로 안에 :로쓰고 속성끼리 ,로 쓰는데
+            // 1개의 속성값도 2개처럼  중가로 안에 :로 표현 가능
+ 
+            $("h2").click(function(){
+                $(this).css({"color":"red","background":"green"})
+                $("h1").css({"display":"none"})
+            }) //h2
+
+        }) //jQuery close
+        </script>
+</head>
+<body>
+    <h1>jQuery event</h1>
+    <button id="left">left</button>
+    <button id="right">right</button>
+    <button id="top">top</button>
+    <button id="bottom">bottom</button>
+    <div class="box">
+        <div class="circle"></div>
+    </div><!-- box -->
+
+    <h1>title</h1>
+    <h2>sub title</h2>
+</body>
+</html>

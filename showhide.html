@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="script/jquery-3.7.1.js"></script>
+    <script lang="java">
+        $(function(){
+            $("#hide").click(function(){
+                $("h1").hide("fast")
+            })//hide close
+            $("#show").click(function(){
+                $("h1").show("slow")
+            })//show close
+            $("#toggle").click(function(){
+                $("p").toggle(1000)
+            })//toggle close
+
+        })//jQuery close
+    </script>
+</head>
+<body>
+    <h1>header</h1>
+    <p>toggle toggle toggle</p>
+    <button id="hide">hide</button>
+    <button id="show">show</button>
+
+    <button id="toggle">toggle</button>
+</body>
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="script/jquery-3.7.1.js"></script>
+    <script src="script/jquery-ui.js"></script>
+    <script lang="java">
+        $(function(){
+            $(".btn").click(function(){
+                $(".img_box img").animate({"width":"0","opacity":"0"},1000)
+            }) //btn
+        }) //jQuery
+    </script>
+
+    <style type="text/css">
+        .box {
+            width: 600px;
+            height: 400px;
+            position: relative;
+            border: 3px solid slateblue;
+        }
+
+        .btn {
+            width: 50px;
+            height: 400px;
+            position: absolute;
+            left: 0;
+            top: 0;
+        }
+
+        .img_box img{
+            width: 600px;
+            height: 400px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>이미지 가로 크기 변경 animate</h1>
+    <div class="box">
+        <button class="btn">click</button>
+        <div class="img_box">
+            <img src="img/animal01.png" alt="동물1">
+        </div><!-- img_box -->
+    </div>
+</body>
+
+</html>

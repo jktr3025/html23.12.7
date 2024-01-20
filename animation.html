@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style type="text/css">
+        .box{
+            width: 50px;
+            height: 50px;
+            background: coral;
+            margin: 30px;
+            position: relative;
+        }
+    </style>
+    <script src="script/jquery-3.7.1.js"></script>
+    <script src="script/jquery-ui.js"></script>
+    <script lang="java">
+        $(function(){
+            $(".btn").click(function(){
+                // $(".box").animate({"left" : "250px"},2000).animate({"opacity" : "0.5"},1000)
+                // 애니메이션 여러개로 연결도 가능하고 아래처럼 한 번에도 가능
+            //   $(".box").animate({"left" : "250px","opacity" : "0.5"})
+            // $(".box").animate({"background-color":"red"},1000).animate({"width":"100px"},500)
+            // ui jQuery  다운받아서 스크립트 붙여야 컬러 변경 가능한데
+            // 기본 제이커리 아래에 붙여줘야함
+            $(".box").animate({"left" : "+=100px"},500)
+            }) //btn close
+
+        }) //jQuery close
+    </script>
+</head>
+<body>
+    <button class="btn">animate button</button>
+    <div class="box"></div>
+</body>
+</html>

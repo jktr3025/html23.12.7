@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="script/jquery-3.7.1.min.js"></script>
+    <script lang="java">
+        // $(document).ready(function(){}) 문서처리
+        
+        // <선택자>
+        // $(this).hide() - 현재요소
+        // $("p").hide() - <p>요소
+            // $(".test").hide() - class가 "test"인 모든 요소
+            // $("#test").hide() - id가 "test"인 모든 요소
+            // $("*").hide() - 모든 요소
+            // $("h1.test").hide() - h1 중 class가 test인 요소
+            // $("ul > li:first-child()").hide() - ul을 부모로 가진 li 중 첫번째 li 
+            // $("[herf]") - 속성 중 herf 
+            // $(":text") - 속성 값 중 text
+            // this나 숫자를 제외하고는 () 안에 거의 ""가 필요
+
+            // <이벤트>
+            // 1.마우스 동작
+            // click 
+            // dbclick
+            // mouseenter
+            // mouseleave
+            // mouseout
+            // mouseover
+            
+        
+        $(function(){
+            $("button").click(function(){
+                $(".test").hide(1000);
+            })//click close
+        })  // jQuery close 
+    </script>
+
+
+</head>
+<body>
+    <h1 class="test">header1</h1>
+
+    <p class="test">Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
+
+    <p id="test">Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
+
+    <button> click me</button>
+
+    <a href="hppt://www.naver.com">네이버</a>
+    
+    <input type="text">
+
+    <table>
+        <tr>
+            <td>4</td>
+            <td>2</td>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>3</td>
+        </tr>
+        <tr>
+            <td>3</td>
+            <td>6</td>
+        </tr>
+    </table>
+
+</body>
+</html>

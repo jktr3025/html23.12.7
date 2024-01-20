@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="script/jquery-3.7.1.js"></script>
+    <script lang="java">
+        $(function () {
+            $(".box1 p").click(function () {
+                $(this).hide();
+            }) //box1 close
+            $(".box2 p").dblclick(function () {
+                $(this).hide();
+            }) //box2 close
+            $(".box3 p").mouseenter(function () {
+                alert("mouse enter");
+            }) //box3 close
+            $("#box4_p").mouseleave(function () {
+                alert("bye bye");
+            }) //box4 close
+            $("#box5_p").mousedown(function () {
+                alert("nonononno")
+            }) //box5 close
+            //  mousedown은 click과 비슷한데 clisck은 왼쪽 버튼 클릭만 되지만 mousedown은 오른쪽 왼쪽 클릭 다 가능
+
+            $("#box6_p").mouseup(function () {
+                alert("yeeeeeeeeees")
+            }) //box6 close
+
+            $("#box7_p").hover(function () {
+                alert("mouse enter")
+            }, function () {
+                alert("bye bye")
+            }) //box7 close
+
+            $(".box8 input").focus(function () {
+                $(this).css("background-color", "orange")
+            }) //box8 close
+
+            $(".box8 input").blur(function () {
+                $(this).css("background-color", "green")
+            }) //box8 close
+
+            $(".box9 p").on({
+                mouseenter: function () {
+                    $(this).css("background-color", "yellow")
+                },
+                mouseleave: function () {
+                    $(this).css("background-color", "red")
+                },
+                click: function () {
+                    $(this).css("background-color", "blue")
+                }
+            })//box9 close
+
+
+        }) //java close
+    </script>
+
+    <style type="text/css">
+        div {
+            border: 1px solid navy;
+            margin: 50px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box1">
+        <p>click me 1</p>
+        <p>click me 2</p>
+        <p>click me 3</p>
+    </div><!-- box1 -->
+
+    <div class="box2">
+        <p>double-click 1</p>
+        <p>double-click 2</p>
+        <p>double-click 3</p>
+        <p>double-click 4</p>
+    </div><!-- box2 -->
+
+    <div class="box3">
+        <p>enter me</p>
+    </div><!-- box3 -->
+
+    <div class="box4">
+        <p id="box4_p">leave me</p>
+    </div><!-- box4 -->
+
+    <div class="box5">
+        <p id="box5_p">down me</p>
+    </div><!-- box5 -->
+
+    <div class="box6">
+        <up id="box6_p">up me</p>
+    </div><!-- box6 -->
+
+    <div class="box7">
+        <up id="box7_p">hover me</p>
+    </div><!-- box7 -->
+
+    <div class="box8">
+        이름 : <input type="text"> <br>
+        메일 : <input type="email">
+    </div><!-- box8 -->
+
+    <div class="box9">
+        <p>click click</p>
+    </div><!-- box9 -->
+
+    
+</body>
+
+</html>
